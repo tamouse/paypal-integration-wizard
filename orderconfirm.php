@@ -116,6 +116,7 @@ if ( $PaymentOption == "PayPal" )
 <html>
 <script>
 alert("Payment Successful");
+alert('<?php print_r($resArray); ?>');
 // add relevant message above or remove the line if not required
 window.onload = function(){
     if(window.opener){
@@ -130,12 +131,6 @@ window.onload = function(){
 };
                                 
 </script>
-<body>
-<h3>Result</h3>
-<pre><code>
-<?php print_r($resArray); ?>
-</code></pre>
-</body>
 </html>
 		<?php
 	}
@@ -158,6 +153,7 @@ window.onload = function(){
 <html>
 <script>
 alert("Payment failed");
+alert('<?php print_r($resArray); ?>');
 // add relevant message above or remove the line if not required
 window.onload = function(){
     if(window.opener){
@@ -172,12 +168,6 @@ window.onload = function(){
 };
                                 
 </script>
-<body>
-<h3>Result</h3>
-<pre><code>
-<?php print_r($resArray); ?>
-</code></pre>
-</body>
 </html>
 <?php 
 	}
