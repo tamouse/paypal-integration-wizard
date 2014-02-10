@@ -7,8 +7,6 @@ if ( $PaymentOption == "PayPal")
         // ==================================
         // PayPal Express Checkout Module
         // ==================================
-
-	
 	        
         //'------------------------------------
         //' The paymentAmount is the total value of 
@@ -34,7 +32,7 @@ if ( $PaymentOption == "PayPal")
         //'
         //' This is set to the value entered on the Integration Assistant 
         //'------------------------------------
-        $returnURL = "http://brewtoad.com";
+        $returnURL = "http://tamouse.com/paypal-integration-wizard/success.html";
 
         //'------------------------------------
         //' The cancelURL is the location buyers are sent to when they hit the
@@ -42,7 +40,7 @@ if ( $PaymentOption == "PayPal")
         //'
         //' This is set to the value entered on the Integration Assistant 
         //'------------------------------------
-        $cancelURL = "http://brewtoad.com/cancel";
+        $cancelURL = "http://tamouse.com/paypal-integration-wizard/cancel.html";
 
         //'------------------------------------
         //' Calls the SetExpressCheckout API call
@@ -52,7 +50,7 @@ if ( $PaymentOption == "PayPal")
         //'-------------------------------------------------
         
 		$items = array();
-		$items[] = array('name' => 'Item Name', 'amt' => $paymentAmount, 'qty' => 1);
+		$items[] = array('name' => 'Monthly Subscription', 'amt' => $paymentAmount, 'qty' => 1);
 	
 		//::ITEMS::
 		
@@ -88,5 +86,3 @@ if ( $PaymentOption == "PayPal")
                 echo "Error Severity Code: " . $ErrorSeverityCode;
             }
     }
-
-?>
