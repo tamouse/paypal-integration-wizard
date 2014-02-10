@@ -130,6 +130,12 @@ window.onload = function(){
 };
                                 
 </script>
+<body>
+<h3>Result</h3>
+<pre><code>
+<?php print_r($resArray); ?>
+</code></pre>
+</body>
 </html>
 		<?php
 	}
@@ -141,11 +147,13 @@ window.onload = function(){
 		$ErrorLongMsg = urldecode($resArray["L_LONGMESSAGE0"]);
 		$ErrorSeverityCode = urldecode($resArray["L_SEVERITYCODE0"]);
 
-		echo "DoExpressCheckoutDetails API call failed. ";
-		echo "Detailed Error Message: " . $ErrorLongMsg;
-		echo "Short Error Message: " . $ErrorShortMsg;
-		echo "Error Code: " . $ErrorCode;
-		echo "Error Severity Code: " . $ErrorSeverityCode;
+        echo "<pre><code>" . PHP_EOL;
+		echo "DoExpressCheckoutDetails API call failed. " . PHP_EOL;
+		echo "Detailed Error Message: " . $ErrorLongMsg . PHP_EOL;
+		echo "Short Error Message: " . $ErrorShortMsg . PHP_EOL;
+		echo "Error Code: " . $ErrorCode . PHP_EOL;
+		echo "Error Severity Code: " . $ErrorSeverityCode . PHP_EOL;
+        echo "</code></pre>" . PHP_EOL;
 	?>
 <html>
 <script>
@@ -164,6 +172,12 @@ window.onload = function(){
 };
                                 
 </script>
+<body>
+<h3>Result</h3>
+<pre><code>
+<?php print_r($resArray); ?>
+</code></pre>
+</body>
 </html>
 <?php 
 	}
