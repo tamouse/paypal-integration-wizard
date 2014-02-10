@@ -115,8 +115,7 @@ if ( $PaymentOption == "PayPal" )
 		?>
 <html>
 <script>
-alert("Payment Successful");
-alert('<?php print_r($resArray); ?>');
+alert("Payment Successful <?php echo $paymentStatus ?>");
 // add relevant message above or remove the line if not required
 window.onload = function(){
     if(window.opener){
@@ -153,7 +152,6 @@ window.onload = function(){
 <html>
 <script>
 alert("Payment failed");
-alert('<?php print_r($resArray); ?>');
 // add relevant message above or remove the line if not required
 window.onload = function(){
     if(window.opener){
